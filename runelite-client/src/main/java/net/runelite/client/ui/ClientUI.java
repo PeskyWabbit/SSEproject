@@ -275,6 +275,7 @@ public class ClientUI
 				return false;
 			}
 
+
 			final String name = player.getName();
 
 			if (Strings.isNullOrEmpty(name))

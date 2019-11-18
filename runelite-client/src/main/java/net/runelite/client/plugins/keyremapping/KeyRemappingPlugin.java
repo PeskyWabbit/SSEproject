@@ -46,6 +46,7 @@ import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.input.KeyManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
+import net.runelite.client.plugins.clientSideNameChange.NameChangeConfig;
 import net.runelite.client.ui.JagexColors;
 import net.runelite.client.util.ColorUtil;
 
@@ -72,6 +73,9 @@ public class KeyRemappingPlugin extends Plugin
 
 	@Inject
 	private KeyRemappingListener inputListener;
+
+	@Inject
+	private NameChangeConfig config;
 
 	@Getter(AccessLevel.PACKAGE)
 	@Setter(AccessLevel.PACKAGE)
@@ -200,7 +204,7 @@ public class KeyRemappingPlugin extends Plugin
 	private String getPlayerNameWithIcon()
 	{
 		IconID icon;
-		switch (client.getAccountType())
+		switch (config.playerIcon())
 		{
 			case IRONMAN:
 				icon = IconID.IRONMAN;

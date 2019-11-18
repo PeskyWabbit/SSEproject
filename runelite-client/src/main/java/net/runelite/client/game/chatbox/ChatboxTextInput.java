@@ -134,7 +134,7 @@ public class ChatboxTextInput extends ChatboxInput implements KeyListener, Mouse
 		this.lines = lines;
 		if (built)
 		{
-			clientThread.invoke(this::update);
+			//clientThread.invoke(this::update);
 		}
 		return this;
 	}
@@ -144,7 +144,7 @@ public class ChatboxTextInput extends ChatboxInput implements KeyListener, Mouse
 		this.prompt = prompt;
 		if (built)
 		{
-			clientThread.invoke(this::update);
+			//clientThread.invoke(this::update);
 		}
 		return this;
 	}

@@ -52,6 +52,8 @@ public interface Actor extends Renderable
 	 */
 	String getName();
 
+	void setName(String name);
+
 	/**
 	 * Gets the actor being interacted with.
 	 * <p>
